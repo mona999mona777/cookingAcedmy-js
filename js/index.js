@@ -1,78 +1,138 @@
 /// <reference types="../@types/jquery" />
-//nav-side toogle
+//(open & close) navside
 $(".nav-open").on("click", function () {
-  $(".inner-navside").animate({ width: "toggle" }, 800);
-  $(".change-icon").toggleClass("fa-bars");
-  $(".change-icon").toggleClass("fa-xmark");
-});
-// OPEN
-$(".fa-bars").on("click", function () {
-  $(".first").removeClass("d-none").addClass("d-block");
-  $(".first")
-    .removeClass("d-none")
-    .addClass("text-light")
-    .animate({ bottom: "150px", left: "0" }, 200, function () {
-      $(".second").removeClass("d-none").addClass("d-block");
-      $(".second")
-        .removeClass("d-none")
-        .addClass("text-light")
-        .animate({ bottom: "120px", left: "0" }, 200, function () {
-          $(".third").removeClass("d-none").addClass("d-block");
-          $(".third")
-            .removeClass("d-none")
-            .addClass("text-light")
-            .animate({ bottom: "90px", left: "0" }, 200, function () {
-              $(".fourth").removeClass("d-none").addClass("d-block");
-              $(".fourth")
-                .removeClass("d-none")
-                .addClass("text-light")
-                .animate({ bottom: "60px", left: "0" }, 200, function () {
-                  $(".fifth").removeClass("d-none").addClass("d-block");
-                  $(".fifth")
-                    .removeClass("d-none")
-                    .addClass("text-light")
-                    .animate({ bottom: "30px", left: "0" }, 200);
-                });
-            });
-        });
-    });
-});
-// CLOSEEEEE
-$(".pp").on("click", function () {
-  $(".inner-navside").animate({ width: "toggle" }, 800);
-  $(".change-icon").toggleClass("fa-bars");
-  $(".change-icon").toggleClass("fa-xmark");
-
-  $(".first").animate({ bottom: "0", left: "-50px" }, 200, function () {
-    $(".first").removeClass("d-block").addClass("d-none");
-    $(".second").animate({ bottom: "0", left: "-50px" }, 200, function () {
-      $(".second").removeClass("d-block").addClass("d-none");
-      $(".third").animate({ bottom: "0", left: "-50px" }, 200, function () {
-        $(".third").removeClass("d-block").addClass("d-none");
-        $(".fourth").animate({ bottom: "0", left: "-50px" }, 200, function () {
-          $(".fourth").removeClass("d-block").addClass("d-none");
-          $(".fifth").animate({ bottom: "0", left: "-50px" }, 200, function () {
-            $(".fifth").removeClass("d-block").addClass("d-none");
+  if (document.querySelector(".change-icon").classList.contains("fa-bars")) {
+    $(".inner-navside").animate({ width: "toggle" }, 800);
+    $(".change-icon").removeClass("fa-bars").addClass("fa-xmark");
+    $(".first").removeClass("d-none").addClass("d-block");
+    $(".first")
+      .removeClass("d-none")
+      .addClass("text-light")
+      .animate({ bottom: "150px", left: "0" }, 200, function () {
+        $(".second").removeClass("d-none").addClass("d-block");
+        $(".second")
+          .removeClass("d-none")
+          .addClass("text-light")
+          .animate({ bottom: "120px", left: "0" }, 200, function () {
+            $(".third").removeClass("d-none").addClass("d-block");
+            $(".third")
+              .removeClass("d-none")
+              .addClass("text-light")
+              .animate({ bottom: "90px", left: "0" }, 200, function () {
+                $(".fourth").removeClass("d-none").addClass("d-block");
+                $(".fourth")
+                  .removeClass("d-none")
+                  .addClass("text-light")
+                  .animate({ bottom: "60px", left: "0" }, 200, function () {
+                    $(".fifth").removeClass("d-none").addClass("d-block");
+                    $(".fifth")
+                      .removeClass("d-none")
+                      .addClass("text-light")
+                      .animate({ bottom: "30px", left: "0" }, 200);
+                  });
+              });
           });
+      });
+  } else if (
+    document.querySelector(".change-icon").classList.contains("fa-xmark")
+  ) {
+    $(".inner-navside").animate({ width: "toggle" }, 800);
+    $(".change-icon").removeClass("fa-xmark").addClass("fa-bars");
+    $(".first").animate({ bottom: "0", left: "-50px" }, 200, function () {
+      $(".first").removeClass("d-block").addClass("d-none");
+      $(".second").animate({ bottom: "0", left: "-50px" }, 200, function () {
+        $(".second").removeClass("d-block").addClass("d-none");
+        $(".third").animate({ bottom: "0", left: "-50px" }, 200, function () {
+          $(".third").removeClass("d-block").addClass("d-none");
+          $(".fourth").animate(
+            { bottom: "0", left: "-50px" },
+            200,
+            function () {
+              $(".fourth").removeClass("d-block").addClass("d-none");
+              $(".fifth").animate(
+                { bottom: "0", left: "-50px" },
+                200,
+                function () {
+                  $(".fifth").removeClass("d-block").addClass("d-none");
+                }
+              );
+            }
+          );
         });
       });
     });
-  });
+  }
 });
-
-// document.addEventListener('DOMContentLoaded',function(){
-//   console.log("hellow")
-// })
-
+$(".routing-item").on("click", function () {
+  if (document.querySelector(".change-icon").classList.contains("fa-bars")) {
+    $(".inner-navside").animate({ width: "toggle" }, 800);
+    $(".change-icon").removeClass("fa-bars").addClass("fa-xmark");
+    $(".first").removeClass("d-none").addClass("d-block");
+    $(".first")
+      .removeClass("d-none")
+      .addClass("text-light")
+      .animate({ bottom: "150px", left: "0" }, 200, function () {
+        $(".second").removeClass("d-none").addClass("d-block");
+        $(".second")
+          .removeClass("d-none")
+          .addClass("text-light")
+          .animate({ bottom: "120px", left: "0" }, 200, function () {
+            $(".third").removeClass("d-none").addClass("d-block");
+            $(".third")
+              .removeClass("d-none")
+              .addClass("text-light")
+              .animate({ bottom: "90px", left: "0" }, 200, function () {
+                $(".fourth").removeClass("d-none").addClass("d-block");
+                $(".fourth")
+                  .removeClass("d-none")
+                  .addClass("text-light")
+                  .animate({ bottom: "60px", left: "0" }, 200, function () {
+                    $(".fifth").removeClass("d-none").addClass("d-block");
+                    $(".fifth")
+                      .removeClass("d-none")
+                      .addClass("text-light")
+                      .animate({ bottom: "30px", left: "0" }, 200);
+                  });
+              });
+          });
+      });
+  } else if (
+    document.querySelector(".change-icon").classList.contains("fa-xmark")
+  ) {
+    $(".inner-navside").animate({ width: "toggle" }, 800);
+    $(".change-icon").removeClass("fa-xmark").addClass("fa-bars");
+    $(".first").animate({ bottom: "0", left: "-50px" }, 200, function () {
+      $(".first").removeClass("d-block").addClass("d-none");
+      $(".second").animate({ bottom: "0", left: "-50px" }, 200, function () {
+        $(".second").removeClass("d-block").addClass("d-none");
+        $(".third").animate({ bottom: "0", left: "-50px" }, 200, function () {
+          $(".third").removeClass("d-block").addClass("d-none");
+          $(".fourth").animate(
+            { bottom: "0", left: "-50px" },
+            200,
+            function () {
+              $(".fourth").removeClass("d-block").addClass("d-none");
+              $(".fifth").animate(
+                { bottom: "0", left: "-50px" },
+                200,
+                function () {
+                  $(".fifth").removeClass("d-block").addClass("d-none");
+                }
+              );
+            }
+          );
+        });
+      });
+    });
+  }
+});
 $(function () {
   $(".loader").fadeOut(1000, function () {
     $(".loading").slideUp(1000, function () {
       $("body").css("overflow", "auto");
-      // $('loading').remove()
     });
   });
 });
-
 // section-one
 let allMeals = [];
 meals();
@@ -135,9 +195,6 @@ async function mealsCategories() {
 function dispalyCategories() {
   $(".meeals").removeClass("d-none").addClass("d-block");
   $(".serchh").removeClass("d-block").addClass("d-none");
-  $(".inner-navside").animate({ width: "toggle" }, 1000);
-  $(".change-icon").toggleClass("fa-bars");
-  $(".change-icon").toggleClass("fa-xmark");
 
   var all = ``;
   for (var i = 0; i < allcategories.length; i++) {
@@ -204,7 +261,6 @@ function dispaOneCategory() {
 
   document.getElementById("all-meals").innerHTML = all;
 }
-
 //(all areas)
 let allAreas = [];
 async function mealsArea() {
@@ -228,9 +284,6 @@ async function mealsArea() {
 function dispalyAreas() {
   $(".meeals").removeClass("d-none").addClass("d-block");
   $(".serchh").removeClass("d-block").addClass("d-none");
-  $(".inner-navside").animate({ width: "toggle" }, 1000);
-  $(".change-icon").toggleClass("fa-bars");
-  $(".change-icon").toggleClass("fa-xmark");
   var all = ``;
   for (var i = 0; i < allAreas.length; i++) {
     let name = allAreas[i].strArea;
@@ -289,7 +342,6 @@ function dispalyOneArea() {
 
   document.getElementById("all-meals").innerHTML = all;
 }
-
 //(allIngredients)
 let twentyIngredients = [];
 async function mealsIngredients() {
@@ -314,9 +366,6 @@ async function mealsIngredients() {
 function dispalyIngredientsData() {
   $(".meeals").removeClass("d-none").addClass("d-block");
   $(".serchh").removeClass("d-block").addClass("d-none");
-  $(".inner-navside").animate({ width: "toggle" }, 1000);
-  $(".change-icon").toggleClass("fa-bars");
-  $(".change-icon").toggleClass("fa-xmark");
   var all = ``;
   for (var i = 0; i < twentyIngredients.length; i++) {
     let name = twentyIngredients[i].strIngredient;
@@ -336,7 +385,6 @@ function dispalyIngredientsData() {
 
   document.getElementById("all-meals").innerHTML = all;
 }
-
 //(one ingrdiant)
 let twentyingredient = [];
 async function oneIngredient(ingredient) {
@@ -378,7 +426,6 @@ function dispalyOneIngredient() {
 
   document.getElementById("all-meals").innerHTML = all;
 }
-
 //(one meal only)
 let myMeal = [];
 let allTag = [];
@@ -466,46 +513,15 @@ function displayMeal() {
             </div>
             </div>
   `;
-  // $(".serchh").toggleClass("d-none");
-  // $(".meeals").toggleClass("d-none");
   document.getElementById("all-meals").innerHTML = all;
 }
-
 // seearchhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-
 function mySearch() {
   $(".meeals").removeClass("d-block").addClass("d-none");
-  $(".inner-navside").animate({ width: "toggle" }, 1000);
-  $(".change-icon").toggleClass("fa-bars");
-  $(".change-icon").toggleClass("fa-xmark");
-  /*  let ser = `  <div class="col-md-5 offset-1">
-              <input
-                onclick='searchOneMeal("a")'
-                id="the-Email"
-                class="input-style form-control w-100"
-                type="text"
-                name="Search-name"
-                placeholder="Search By Name"
-              />
-            </div>
-            <div class="col-md-5">
-              <input
-              onclick='firstLetterMeals("a")'
-                id="the-pass"
-                class="input-style form-control w-100"
-                type="text"
-                name="Search-letter"
-                placeholder="Search By First Letter"
-              />
-            </div>`; */
-
   $(".serchh").removeClass("d-none").addClass("d-block");
   $(".meeals").addClass("d-block");
   $(".contact-us").removeClass("d-block").addClass("d-none");
-  // document.getElementById("search-page").innerHTML = ser;
 }
-
-// search by name =mealsss=====> one meal
 let mySearchMeal = [];
 async function searchOneMeal(maro) {
   $(".loading").fadeIn();
@@ -543,11 +559,9 @@ function searchDisplayMeal() {
       `;
   }
   $(".meeals").removeClass("d-none").addClass("d-block");
-  // $(".serchh").removeClass("d-block").addClass("d-none");
   $(".contact-us").removeClass("d-block").addClass("d-none");
   document.getElementById("all-meals").innerHTML = all;
 }
-
 // search meal by first letter
 let searchFLetterMeals = [];
 async function firstLetterMeals(letter) {
@@ -585,7 +599,6 @@ function searcHDisplayFLMeals() {
     `;
   }
   $(".meeals").removeClass("d-none").addClass("d-block");
-  // $(".serchh").removeClass("d-block").addClass("d-none");
   $(".contact-us").removeClass("d-block").addClass("d-none");
   document.getElementById("all-meals").innerHTML = all;
 }
@@ -598,14 +611,8 @@ let searchLetter = document.getElementById("search-letter");
 searchLetter.addEventListener("keyup", function () {
   firstLetterMeals(searchLetter.value);
 });
-
 // contact ussssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-
 function contact() {
-  $(".inner-navside").animate({ width: "toggle" }, 1000);
-  $(".change-icon").toggleClass("fa-bars");
-  $(".change-icon").toggleClass("fa-xmark");
-
   $(".contact-us").removeClass("d-none").addClass("d-flex");
   $(".meeals").removeClass("d-block").addClass("d-none");
   $(".serchh").removeClass("d-block").addClass("d-none");
@@ -618,7 +625,6 @@ const fifthInput = document.getElementById("fifth-input");
 const sixInput = document.getElementById("six-input");
 const btn = document.getElementById("marooo");
 const formData = document.querySelector("form");
-
 formData.addEventListener("input", function () {
   if (
     nameValidation() &&
@@ -631,7 +637,6 @@ formData.addEventListener("input", function () {
     $("#op").removeClass("disabled");
   }
 });
-
 function nameValidation() {
   let theFirst = firstInput.value;
   const regex = /^\w{1,}(\s+\w+)*$/;
@@ -658,7 +663,6 @@ function emailValidation() {
     return false;
   }
 }
-
 function phoneValidation() {
   let theThird = thirdInput.value;
   const regex = /^[0-9]{10,}$/;
@@ -672,7 +676,6 @@ function phoneValidation() {
     return false;
   }
 }
-
 function ageValidation() {
   let theFourth = fourthInput.value;
   const regex = /^[1-9]{1,}$/;
@@ -686,7 +689,6 @@ function ageValidation() {
     return false;
   }
 }
-
 function passwordValidation() {
   let theFifth = fifthInput.value;
   const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
@@ -700,7 +702,6 @@ function passwordValidation() {
     return false;
   }
 }
-
 function Repassword() {
   let theSix = sixInput.value;
   let theFifth = fifthInput.value;
@@ -714,48 +715,3 @@ function Repassword() {
     return false;
   }
 }
-
-/*  // draft
-
-
-meal by first letter
-ooooo
-let FLetterMeals = [];
- async function firstLetterMeals(letter) {
-  try {
-    let response = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`
-    );
-    let myMealData = await response.json();
-    FLetterMeals = myMealData.meals;
-    // console.log(FLetterMeals);
-    displayFirstLetterMeals();
-  } catch (error) {
-    console.log(error);
-  }
-}
-function displayFirstLetterMeals() {
-  $(".inner-navside").animate({width:"toggle" }, 1000);
-  $(".change-icon").toggleClass("fa-bars");
-  $(".change-icon").toggleClass("fa-xmark");
-
-  var all = ``;
-  for (var i = 0; i < FLetterMeals.length; i++) {
-    let name = FLetterMeals[i].strMeal;
-    all += `
-        <div class="col-md-3" onclick="oneMeal('${name}')">
-            <div class="inner">
-              <div class="image">
-                <img src="${FLetterMeals[i].strMealThumb}"class="w-100" alt="${FLetterMeals[i].strMeal}" />
-              </div>
-              <div class="layer">
-                <h3 class=" span-f ps-3">${FLetterMeals[i].strMeal}</h3>
-              </div>
-            </div>
-          </div>
-    `;
-  }
-  // $(".serchh").toggleClass("d-none");
-  // $(".meeals").toggleClass("d-none");
-  document.getElementById("all-meals").innerHTML = all;
-} */

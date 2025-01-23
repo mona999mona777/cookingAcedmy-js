@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-   <div class="loading"><div class="loader"></div></div> 
-
+    <div class="loading"><div class="loader"></div></div>
     <!-- nav-side -->
     <div class="nav-side d-flex bg-black">
       <div class="big-width inner-navside">
@@ -21,24 +20,27 @@
         >
           <div class="hidden-top mt-3 px-2 position-relative parent-menu">
             <ul>
-              <li class="py-2">
+              <li class="py-2 routing-item">
                 <a class="first meal-desc" onclick="mySearch()">Search</a>
               </li>
-              <li class="py-2">
-                <a class="second meal-desc" onclick="mealsCategories()">Categories</a>
+              <li class="py-2 routing-item">
+                <a class="second meal-desc" onclick="mealsCategories()"
+                  >Categories</a
+                >
               </li>
-              <li class="py-2">
+              <li class="py-2 routing-item">
                 <a class="third meal-desc" onclick="mealsArea()">Area</a>
               </li>
-              <li class="py-2">
-                <a class="fourth meal-desc" onclick="mealsIngredients()">Ingredients</a>
+              <li class="py-2 routing-item">
+                <a class="fourth meal-desc" onclick="mealsIngredients()"
+                  >Ingredients</a
+                >
               </li>
-              <li class="py-2">
+              <li class="py-2 routing-item">
                 <a class="fifth meal-desc" onclick="contact()">Contact Us</a>
               </li>
             </ul>
           </div>
-
           <div class="hidden-down px-2">
             <ul class="mt-0 pt-0 d-flex align-items-center">
               <li class="me-1">
@@ -57,8 +59,8 @@
                 ></a>
               </li>
             </ul>
-            <p class="mb-0 pb-0  meal-desc">Copyright Â© 2019 All Rights</p>
-            <p class="mt-0 pt-0  meal-desc">Reserved.</p>
+            <p class="mb-0 pb-0 meal-desc">Copyright Â© 2019 All Rights</p>
+            <p class="mt-0 pt-0 meal-desc">Reserved.</p>
           </div>
         </div>
       </div>
@@ -68,8 +70,8 @@
         <img src="images/logo.png" width="50" alt="logo image" />
 
         <div class="border-2 border-danger">
-          <p class="bg-danger p-1 pp mb-0"></p>
-          <span class="nav-open bg-info text-center">
+          <p class="p-1 pp mb-0"></p>
+          <span class="nav-open text-center">
             <i class="change-icon fa-solid fa-bars fs-1"></i
           ></span>
         </div>
@@ -82,9 +84,8 @@
         </div>
       </div>
     </div>
-
     <!-- section-one -->
-    <div class="main ">
+    <div class="main">
       <div id="the-meals">
         <div class="container py-5 d-none serchh">
           <div class="row g-4" id="search-page">
@@ -100,7 +101,8 @@
             <div class="col-md-5">
               <input
                 id="search-letter"
-                class="input-style text-light form-control w-100"  maxlength="1"
+                class="input-style text-light form-control w-100"
+                maxlength="1"
                 type="text"
                 name="Search-letter"
                 placeholder="Search By First Letter"
@@ -109,8 +111,7 @@
           </div>
         </div>
         <div class="container meeals py-5">
-          <div class="row g-4" id="all-meals">
-          </div>
+          <div class="row g-4" id="all-meals"></div>
         </div>
       </div>
     </div>
@@ -147,7 +148,7 @@
               <input
                 id="third-input"
                 class="the-width form-control w-100"
-                type="number"
+                type="tel"
                 name="Search-name"
                 placeholder="Enter your Phone"
               />
@@ -205,7 +206,6 @@
         </form>
       </div>
     </div>
-
     <!-- js files: jquery , bootstrap , my js -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
